@@ -1,11 +1,22 @@
-<h1>Update your password</h1>
-
+<h1>Cambiar su contraseña:</h1>
 <p>
-	Please enter the new password below and then press "Update Password".
+	Por favor ingrese nueva contraseña y presione "Actualizar"
 </p>
+<p class="notice"><%= flash[:notice] %></p>
+<p class="error"><%= flash[:error] %></p>
 
 <%= form_tag password_reset_path, :method => :put do %>
-	<%= password_field_tag :password %>
-	<%= password_field_tag :password_confirmation %>
-	<%= submit_tag "Update Password" %>
+	<table>
+		<tr>
+			<th>Nueva contraseña</th>
+			<td><%= password_field_tag :password %></td>
+		</tr>
+		<tr>
+			<th>Conformar contraseña</th>
+			<td><%= password_field_tag :password_confirmation %></td>
+		</tr>
+	</table>
+	<p>
+		<%= submit_tag 'Actualizar' %>
+	</p>
 <% end %>
