@@ -1,0 +1,10 @@
+<h1><%= 'Nuevo usuario:' %></h1>
+<%= form_for(@user) do |f| %>
+	<%= render :partial => 'form', :locals => { :f => f, :boton => 'Crear'  } %>
+	<p>
+		<%= f.submit 'Crear' %>
+	</p>
+<% end %>
+<p>
+	<%= link_to 'Cancelar', admin_users_path %>
+</p>

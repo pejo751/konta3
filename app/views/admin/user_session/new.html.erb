@@ -1,0 +1,32 @@
+<%= content_for :new_user_session do %>
+	<%= form_for(@user_session, :url => admin_user_session_url) do |f| %>
+		<% if @user_session.errors.any? %>
+			<div id="error_explanation">
+				<h2><%= pluralize(@user_session.errors.count, "error") %> prohibited:</h2>
+				<ul>
+					<% @user_session.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					<% end %>
+				</ul>
+			</div>
+		<% end %>
+		<table>
+			<tr>
+				<th><%= f.label :Usuario %></th>
+				<th><%= f.label :contraseña %></th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr>
+				<th><%= f.text_field :login %></th>
+				<th><%= f.password_field :password %></th>
+				<th><%= f.submit "Entrar" %></th>
+				<th><%= f.submit "Registrarse" %></th>
+			</tr>
+			<tr>
+				<th></th>
+				<th><%= link_to '¿ Olvidó su contraseña ?', new_password_reset_path %></th>
+			</tr>
+		</table>
+	<% end %>
+<% end %>

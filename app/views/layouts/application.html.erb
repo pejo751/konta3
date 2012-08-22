@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Konta3 <%= controller.action_name %></title>
+		<%= stylesheet_link_tag "application", :media => "all" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+	</head>
+	<body onload="setFocusDefault()">
+		<div id='contenedor'>
+			<div id='login'>
+				<% if current_user %>
+					<%= image_tag 'user_blank.gif' %>
+					<%= link_to current_user.nombre, edit_admin_profile_path %> |
+					<%= link_to "Salir", admin_user_session_path, :method => :delete %>
+				<% else %>
+  					<%= yield :new_user_session %>
+				<% end %>
+			</div>
+			<div id='marco'>
+				<div id='menu'>
+					<p>
+						<%= link_to 'Usuarios', admin_users_path %>
+					</p>
+				</div>
+				<div id='main'>
+    				<%= yield %>
+				</div>
+			</div>
+		</div>
+		<div id='pie'>
+			(C) 2012 Powered by Jorge Pereyra Software - 
+			Todos los derechos reservados - 
+			Tucumán - Argentina
+		</div>
+	</body>
+</html>

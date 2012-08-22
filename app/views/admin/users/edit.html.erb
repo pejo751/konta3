@@ -1,0 +1,10 @@
+<h1><%= 'Editar usuario:' %></h1>
+<%= form_for(@user) do |f| %>
+	<%= render :partial => 'form', :locals => { :f => f, :boton => 'Actualizar'  } %>
+	<p>
+		<%= f.submit 'Actualizar' %>
+	</p>
+<% end %>
+<p>
+	<%= link_to 'Cancelar', :root %>
+</p>

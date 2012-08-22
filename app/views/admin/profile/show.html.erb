@@ -1,0 +1,7 @@
+<h1><%= 'Datos actualizados:' %></h1>
+<%= form_for(@user) do |f| %>
+	<%= render :partial => 'admin/users/form', :locals => { :f => f, :boton => 'Show'  } %>
+<% end %>
+<p>
+	<%= link_to 'Cerrar', :root %>
+</p>

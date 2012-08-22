@@ -1,0 +1,10 @@
+<h1><%= 'Actualizar perfil:' %></h1>
+<%= form_for(@user, :url => admin_profile_path) do |f| %>
+	<%= render :partial => 'admin/users/form', :locals => { :f => f, :boton => 'Actualizar'  } %>
+	<p>
+		<%= f.submit 'Actualizar' %>
+	</p>
+<% end %>
+<p>
+	<%= link_to 'Cancelar', :root %>
+</p>
