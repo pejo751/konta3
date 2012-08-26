@@ -20,9 +20,8 @@ class Admin::User < Basico::MaestroBase
   has_attached_file :foto,
       :default_url => 'user_blank.gif',
       :storage => :s3,
-      :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
-      :path => "/konta3/fotos_de_usuarios/:id/:style.:extension",
-      :styles => { :thumb  => "30x30", :medium => "60x60", :large => "90x90"}
+      :s3_credentials => Rails.root.join("config", "s3.yml"),
+      :path => "/konta3/fotos_de_usuario/:id/:basename.:extension"
 
   validates_attachment_size :foto, :less_than => 1.megabytes,
     :message => "es demasiado grande. Debe pesar menos de 1 mb."

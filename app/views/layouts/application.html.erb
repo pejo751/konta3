@@ -14,7 +14,7 @@
 				</div>
 				<div id='login'>
 					<% if current_user %>
-						<%= image_tag 'user_blank.gif', :size => '30x30' %>
+						<%= image_tag current_user.foto, :size => '30x30' %>
 						<%= link_to current_user.nombre, edit_admin_profile_path %> |
 						<%= link_to "Salir", admin_user_session_path, :method => :delete %>
 					<% else %>

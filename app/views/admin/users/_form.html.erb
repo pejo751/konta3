@@ -9,6 +9,15 @@
 	</div>
 <% end %>
 <table>
+    <tr>
+        <th><%= f.label :foto %></th>
+        <td>
+			<%= image_tag @user.foto, :size => '60x60' %>
+			<% if boton != 'Show' %>
+				<br /><%= f.file_field :foto %><br/>
+			<% end %>
+        </td>
+    </tr>
 	<tr>
 		<th><%= f.label :id %></th>
 		<td><%= f.text_field :id, :size => 8, :disabled => true %></td>
