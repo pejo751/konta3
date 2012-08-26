@@ -7,15 +7,20 @@
 		<%= csrf_meta_tags %>
 	</head>
 	<body onload="setFocusDefault()">
-		<div id='contenedor'>
-			<div id='login'>
-				<% if current_user %>
-					<%= image_tag 'user_blank.gif' %>
-					<%= link_to current_user.nombre, edit_admin_profile_path %> |
-					<%= link_to "Salir", admin_user_session_path, :method => :delete %>
-				<% else %>
-  					<%= yield :new_user_session %>
-				<% end %>
+			<div id='banner'>
+				<div id='logo'>
+					<%= link_to "Konta3", root_url, :class => 'titulo', :title => 'Ir a página de inicio' %>
+					Plataforma contable en internet.
+				</div>
+				<div id='login'>
+					<% if current_user %>
+						<%= image_tag 'user_blank.gif', :size => '30x30' %>
+						<%= link_to current_user.nombre, edit_admin_profile_path %> |
+						<%= link_to "Salir", admin_user_session_path, :method => :delete %>
+					<% else %>
+	  					<%= yield :new_user_session %>
+					<% end %>
+				</div>
 			</div>
 			<div id='marco'>
 				<div id='menu'>
@@ -27,11 +32,10 @@
     				<%= yield %>
 				</div>
 			</div>
-		</div>
-		<div id='pie'>
-			(C) 2012 Powered by Jorge Pereyra Software - 
-			Todos los derechos reservados - 
-			Tucumán - Argentina
-		</div>
+			<div id='pie'>
+				(C) 2012 Powered by Jorge Pereyra Software - 
+				Todos los derechos reservados - 
+				Tucumán - Argentina
+			</div>
 	</body>
 </html>

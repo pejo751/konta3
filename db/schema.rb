@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120817232200) do
+ActiveRecord::Schema.define(:version => 20120826000635) do
 
   create_table "users", :force => true do |t|
     t.string   "login",                              :null => false
@@ -32,6 +32,10 @@ ActiveRecord::Schema.define(:version => 20120817232200) do
     t.string   "last_login_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "foto_file_name"
+    t.string   "foto_content_type"
+    t.integer  "foto_file_size"
+    t.datetime "foto_updated_at"
   end
 
 end

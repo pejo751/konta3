@@ -1,0 +1,14 @@
+development:
+  bucket: j614460
+  access_key_id: AKIAJBCD7DNSI4HEQIVQ
+  secret_access_key: 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
+
+test:
+  bucket: j614460
+  access_key_id: AKIAJBCD7DNSI4HEQIVQ
+  secret_access_key: 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
+
+production:
+  bucket: j614460
+  access_key_id: AKIAJBCD7DNSI4HEQIVQ
+  secret_access_key: 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
