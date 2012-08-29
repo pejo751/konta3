@@ -25,37 +25,49 @@
 	<tr>
 		<th><%= f.label :login %></th>
 		<td><%= f.text_field :login, :disabled => boton == 'Show' %></td>
-		<th><%= f.label :login_fallidos %></th>
-		<td><%= f.text_field :failed_login_count, :size => 5, :disabled => true %></td>
+		<% if controller.controller_name == 'users' %>
+			<th><%= f.label :login_fallidos %></th>
+			<td><%= f.text_field :failed_login_count, :size => 5, :disabled => true %></td>
+		<% end %>
 	</tr>
 	<tr>
 		<th><%= f.label :clave, f.object.new_record? ? nil : 'Cambiar clave' %></th>
 		<td><%= f.password_field :password, :disabled => boton == 'Show' %></td>
-		<th><%= f.label :ultima_solicitud %></th>
-		<td><%= f.text_field :last_request_at, :size => 30, :disabled => true %></td>
+		<% if controller.controller_name == 'users' %>
+			<th><%= f.label :ultima_solicitud %></th>
+			<td><%= f.text_field :last_request_at, :size => 30, :disabled => true %></td>
+		<% end %>
 	</tr>
 	<tr>
 		<th><%= f.label :confirmacion_de_clave %></th>
 		<td><%= f.password_field :password_confirmation, :disabled => boton == 'Show' %></td>
-		<th><%= f.label :actual_login %></th>
-		<td><%= f.text_field :current_login_at, :size => 30, :disabled => true %></td>
+		<% if controller.controller_name == 'users' %>
+			<th><%= f.label :actual_login %></th>
+			<td><%= f.text_field :current_login_at, :size => 30, :disabled => true %></td>
+		<% end %>
 	</tr>
 	<tr>
 		<th><%= f.label :nombre %></th>
 		<td><%= f.text_field :nombre, :size => 50, :disabled => boton == 'Show' %></td>
-		<th><%= f.label :ultimo_login %></th>
-		<td><%= f.text_field :last_login_at, :size => 30, :disabled => true %></td>
+		<% if controller.controller_name == 'users' %>
+			<th><%= f.label :ultimo_login %></th>
+			<td><%= f.text_field :last_login_at, :size => 30, :disabled => true %></td>
+		<% end %>
 	</tr>
 	<tr>
 		<th><%= f.label :email %></th>
 		<td><%= f.text_field :email, :size => 50, :disabled => boton == 'Show' %></td>
-		<th><%= f.label :actual_ip %></th>
-		<td><%= f.text_field :current_login_ip, :size => 20, :disabled => true %></td>
+		<% if controller.controller_name == 'users' %>
+			<th><%= f.label :actual_ip %></th>
+			<td><%= f.text_field :current_login_ip, :size => 20, :disabled => true %></td>
+		<% end %>
 	</tr>
 	<tr>
 		<th><%= f.label :login_oks %></th>
 		<td><%= f.text_field :login_count, :size => 5, :disabled => true %></td>
-		<th><%= f.label :ultima_ip %></th>
-		<td><%= f.text_field :last_login_ip, :size => 20, :disabled => true %></td>
+		<% if controller.controller_name == 'users' %>
+			<th><%= f.label :ultima_ip %></th>
+			<td><%= f.text_field :last_login_ip, :size => 20, :disabled => true %></td>
+		<% end %>
 	</tr>
 </table>

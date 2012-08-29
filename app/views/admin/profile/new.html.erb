@@ -2,7 +2,7 @@
 <%= form_for(@user, :url => admin_profile_path, :html => { :multipart => true }) do |f| %>
 	<%= render :partial => 'admin/users/form', :locals => { :f => f, :boton => 'Registrar'  } %>
 	<p>
-		<%= f.submit 'Registrar' %>
+		<%= f.submit 'Registrarse' %>
 	</p>
 <% end %>
 <p>

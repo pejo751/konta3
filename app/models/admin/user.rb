@@ -1,4 +1,4 @@
-class Admin::User < Basico::MaestroBase
+class Admin::User < ActiveRecord::Base
 
   attr_accessible :login, :nombre, :password, :login_fallidos, :failed_login_count, :last_request_at,
     :password_confirmation, :current_login_at, :last_login_at, :email, :current_login_ip, :login_count,

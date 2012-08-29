@@ -7,7 +7,7 @@ Konta3::Application.routes.draw do
     resource :user_session, :only => [ :new, :create, :destroy ]
   end
   resources :password_reset, :only => [ :new, :create, :edit, :update ]
-  root :to => 'admin/user_session#new'
+  root :to => 'home#index'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
