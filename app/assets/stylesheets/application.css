@@ -17,9 +17,8 @@
 /****************************************************/
 
 input:focus { 
-	background-color:yellow;
+	/*background-color: #CCCCFF;*/
 }
-
 
 /****************************************************/
 /*                     BANNER !!!                   */
@@ -33,10 +32,12 @@ input:focus {
 	min-width: 600px;
 	height: 52px;
 
+	/*border: 1px solid green;*/
 	background: #6273CF;
 	overflow: hidden;
 
-	color: white;
+	color: #CCCCFF;
+
 	font-family: arial;
 	font-size: 8px;
 	text-decoration: none;
@@ -52,13 +53,13 @@ input:focus {
 }
 
 #banner a {
-	color: white;
+	color: #CCCCFF;
 	text-decoration: none;
 }
 
 #banner a:hover {
-	/*background: #4173F0;*/
-	color: black;
+	background: #7483cf;
+	color: white;
 }
 
 /****************************************************/
@@ -69,15 +70,16 @@ input:focus {
 	float: left;
 	width: 59%;
 	height: 45px;
-	padding: 5px 0 0 5px; 
+	padding: 10px 0 0 5px; 
 
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 }
 
 #logo .titulo {
-	padding: 5px;
+	margin: 0 0 0 23%;
+	padding: 1px 5px 1px 5px; 
 	
-	font-size: 26px;
+	font-size: 30px;
 	font-weight: bold;
 }
 
@@ -89,9 +91,20 @@ input:focus {
 	float: left;
 	width: 37%;
 	height: 45px;
-	padding: 5px 0 0 5px; 
+	padding-top: 5px; 
 
-	border: 1px solid black;
+	/*border: 1px solid black;*/
+}
+
+#login img {
+	vertical-align: middle;
+    margin: 5px;
+    margin-right: 5px;
+    border: 1px solid #CCCCFF;
+}
+
+#login .login_nombre {
+	padding: 11px;
 }
 
 /****************************************************/
@@ -99,11 +112,12 @@ input:focus {
 /****************************************************/
 #marco {
 	margin-left: -8px;
+	margin-top: -1px;
 	float: left;
 	width: 100%;
 	min-width: 600px;
 
-	border: 1px solid red;
+	/*border: 1px solid red;*/
 	overflow: hidden;
 }
 
@@ -118,7 +132,7 @@ input:focus {
 }
 
 #marco a:hover {
-	background: #ccccff;
+	background: #CCCCFF;
 }
 
 #marco .titulo {
@@ -143,6 +157,10 @@ input:focus {
 	border: 1px solid #CCCCCC;
 }
 
+#marco td input {
+	border: 0px solid red;
+}
+
 /****************************************************/
 /*                     MENU !!!                     */
 /****************************************************/
@@ -150,13 +168,13 @@ input:focus {
 #menu {
 	float: left;
 	width: 14%;
-	min-height: 350px;
+	height: 380px;
 
 	/*padding: 5px;
 	padding-top: 53px;
 	padding-left: 15px;*/
 
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 	
 	/*color: black;
 	
@@ -171,13 +189,16 @@ input:focus {
 
 #main {
 	float: left;
-	width: 84%;
-	min-height: 350px;
+	width: 82%;
+	/*min-width: 500px;*/
+	height: 380px;
+	/*min-height: 350px;*/
 	padding-left: 10px;
 
-	border: 1px solid black;
+	/*border: 1px solid black;*/
+	border: 1px solid #6273CF;
 	
-	overflow: auto;
+	overflow: hidden;
 	color: black;
 	
 	font-family: arial;
@@ -200,19 +221,6 @@ input:focus {
 
 #main a:hover {
 	background: #ccccff;
-}
-
-.setup {
-	float: left;
-	margin-right: 10px;
-	width: auto;
-	height: auto;
-
-	overflow: auto;
-	color: black;
-
-	font-family: arial;
-	font-size: 10px;
 }
 
 /****************************************************/
@@ -290,16 +298,16 @@ input:focus {
 	margin-left: -8px;
 	float: left;
 	width: 100%;
-	min-width: 650px;
+	min-width: 600px;
 	height: auto;
 
 	/*border: 3px solid #6666cc;*/
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 	
 	/*background: -webkit-gradient(linear, 0% 0%, 0% 150%, from(white), to(black));*/
 	
 	font-family: tahoma, verdana, sans-serif;
 	font-size: 10px;
-	line-height: 35px;
+	line-height: 20px;
 	text-align: center;
 }

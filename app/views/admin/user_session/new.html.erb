@@ -12,8 +12,8 @@
 		<% end %>
 		<table>
 			<tr>
-				<th><%= f.label 'Usuario:' %></th>
-				<th><%= f.label 'Contraseña:' %></th>
+				<td><%= f.label 'Usuario:' %></td>
+				<td><%= f.label 'Contraseña:' %></td>
 			</tr>
 			<tr>
 				<td><%= f.text_field :login %></td>
@@ -21,7 +21,7 @@
 				<td><%= f.submit "Entrar" %></th>
 			</tr>
 			<tr>
-				<td><%= link_to 'Regístrese', new_password_reset_path, :title => 'Regístrese como nuevo usuario' %></td>
+				<td><%= link_to 'Regístrese', new_admin_profile_path, :title => 'Regístrese como nuevo usuario' %></td>
 				<td><%= link_to '¿ Olvidó su contraseña ?', new_password_reset_path,
 					:title => 'Registre una nueva contraseña' %></td>
 			</tr>

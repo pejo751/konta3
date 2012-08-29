@@ -14,9 +14,9 @@
 				</div>
 				<div id='login'>
 					<% if current_user %>
-						<%= image_tag current_user.foto, :size => '30x30' %>
-						<%= link_to current_user.nombre, edit_admin_profile_path %> |
-						<%= link_to "Salir", admin_user_session_path, :method => :delete %>
+						<%= link_to image_tag(current_user.foto, :size => '30x30'), edit_admin_profile_path %>
+						<%= link_to current_user.login_nombre, edit_admin_profile_path, :class => 'login_nombre' %>
+						<%= link_to "Salir", admin_user_session_path, :method => :delete, :class => 'login_nombre' %>
 					<% else %>
 	  					<%= yield :new_user_session %>
 					<% end %>

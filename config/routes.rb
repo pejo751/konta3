@@ -1,7 +1,9 @@
 Konta3::Application.routes.draw do
   namespace :admin do
     resources :users
-    resource :profile
+    resource :profile do
+      post 'upload', :on => :collection
+    end
     resource :user_session, :only => [ :new, :create, :destroy ]
   end
   resources :password_reset, :only => [ :new, :create, :edit, :update ]

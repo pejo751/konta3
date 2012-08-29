@@ -14,7 +14,7 @@ class Admin::User < Basico::MaestroBase
   end
   
   def login_nombre
-		self.login + ' (' + self.nombre + ')'
+		"#{self.login} (#{self.nombre})"
 	end
 
   has_attached_file :foto,
